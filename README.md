@@ -1,6 +1,6 @@
 # test_flutter_web
 
-A new Flutter project.
+A new Flutter project. If you have properly setup Flutter Web, then do `flutter run -d chrome` to run in a browser.
 
 ## Getting Started
 
