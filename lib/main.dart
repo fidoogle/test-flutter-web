@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.light),
       home: Scaffold(
         appBar: AppBar(title: Text('My Cool App'),),
-        body: Align(
-          alignment: Alignment.topCenter,
+        body: Padding(
+          padding: EdgeInsets.only(top:100, left:20),
           child: Icon(Icons.cake, size:50),
           ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
