@@ -8,24 +8,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(brightness: Brightness.light),
       home: Scaffold(
-        appBar: AppBar(title: Text('My Cool App'),),
-        body: Container(
-          margin: EdgeInsets.all(100),
-          color: Colors.blue,
-          width: 100,
-          height: 100,
-          alignment: Alignment.centerLeft,
-          padding: EdgeInsets.all(50),
-          child: Icon(Icons.cake),
-          ),
-        floatingActionButton: FloatingActionButton(onPressed: () {}),
-        drawer: Drawer(),
-        bottomNavigationBar: BottomNavigationBar(items: [
-          BottomNavigationBarItem(title: Text('foo'), icon: Icon(Icons.call)),
-          BottomNavigationBarItem(title: Text('bar'), icon: Icon(Icons.cached))
-        ]),
+        body: Center(
+          child: Container(
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              shape: BoxShape.circle,
+              // border: Border.all(width: 5),
+              // boxShadow: [
+              //   BoxShadow(offset: Offset(40, 40), color: Colors.pink),
+              //   BoxShadow(offset: Offset(20, 20), color: Colors.yellow),
+              // ],
+              // gradient: RadialGradient(colors: [Colors.yellow, Colors.pink])
+            ),
+
+            width: 100,
+            height: 100,
+          )
+        ),
       ),
     );
   }
