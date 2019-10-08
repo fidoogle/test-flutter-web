@@ -8,10 +8,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(brightness: Brightness.light),
       home: Scaffold(
         appBar: AppBar(title: Text('My Cool App'),),
-        body: Center(child: Icon(Icons.cake),),
+        body: Align(
+          alignment: Alignment.topCenter,
+          child: Icon(Icons.cake, size:50),
+          ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
         drawer: Drawer(),
         bottomNavigationBar: BottomNavigationBar(items: [
