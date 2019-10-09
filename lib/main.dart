@@ -10,22 +10,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Row(
-            children: <Widget>[
-              Expanded(//make text wrap
-                child: Container(
-                  height: 100,
-                  child: Text(
-                    'Hello World this is too long. Use Provider Finder® to search for doctors and hospitals in your plan network. You can also estimate costs for a medical service. Always confirm that the provider you choose is in your plan network to make sure the service is covered.',
-                    //overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ],
+          child: GestureDetector(
+            onTapDown: (details) => print(details.globalPosition.dx),
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.red
+            ),
           ),
         ),
       ),
