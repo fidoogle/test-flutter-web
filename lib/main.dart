@@ -9,33 +9,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SizedBox.expand(
-          child: Stack(
-            children: <Widget>[
-              Icon(
-                Icons.camera,
-                size: 100,
-                color: Colors.red,
-              ),
-              Align(
-                  alignment: Alignment.center,
-                  child: Icon(
-                    Icons.camera,
-                    size: 100,
-                    color: Colors.blue,
-                  )),
-              Positioned(
-                  bottom: 20,
-                  left: 100,
-                  child: Icon(
-                    Icons.camera,
-                    size: 100,
-                    color: Colors.green,
-                  ))
-            ],
-          ),
-        ),
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: _cards(),
+        )
       ),
     );
+  }
+
+  List<Widget> _cards() {
+    return [1,2,3,4,5,6,7,8,9].map((v) => Container(
+        color: Colors.blue,
+        margin: EdgeInsets.all(20),
+        height: 100,
+        child: Center(child: Text('$v')),
+      )
+    ).toList();
   }
 }
