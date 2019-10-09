@@ -10,15 +10,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Material(
+          child: RaisedButton(
+            child: Text('TAP'),
             color: Colors.red,
-            child: InkWell(
-              onTap: () => print('tapped!!!'),
-              child: Container(
-                width: 100,
-                height: 100,
-              ),
-            ),
+            hoverColor: Colors.cyan,
+            onPressed: () => print('pressed!'),
           ),
         ),
       ),
