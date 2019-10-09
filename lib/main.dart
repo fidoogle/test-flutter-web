@@ -10,21 +10,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              // border: Border.all(width: 5, color: Colors.red),
-              // boxShadow: [
-              //   BoxShadow(offset: Offset(40, 40), color: Colors.pink),
-              //   BoxShadow(offset: Offset(20, 20), color: Colors.yellow),
-              // ],
-              gradient: RadialGradient(colors: [Colors.yellow, Colors.pink])
-            ),
-
-            width: 100,
-            height: 100,
-          )
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                  height: 100,
+                  child: Text(
+                    'Hello World this is too long',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
